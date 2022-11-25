@@ -21,6 +21,7 @@ body {
 /* quote */
 
 .quote-container {
+	position: relative;
 	width: auto;
 	max-width: 900px;
 	padding: 20px 30px;
@@ -44,6 +45,7 @@ body {
 	font-weight: 400;
 	font-style: italic;
 	opacity: 0.9;
+	color: #1693f2;
 }
 
 /* buutons */
@@ -77,8 +79,42 @@ button:active {
 	color: #38a1f3;
 }
 .new-quote:hover {
-	color: #23ab92ac;
+	color: #38a1f3;
 }
+
+/* loader */
+.loader {
+	border: 16px solid #f3f3f3; /* Light grey */
+	border-top: 16px solid #333;
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* copy */
+
+#copy-text {
+	all: unset;
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	cursor: pointer;
+	color: #1693f2;
+}
+#copy-text:active {
+	color: #1693f2aa;
+}
+
 /* media query  */
 @media screen and (max-width: 1000px) {
 	.quote-container {
